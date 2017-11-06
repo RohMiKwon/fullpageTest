@@ -1,0 +1,184 @@
+$header-height: (70/16)*1em;
+
+.dimmed {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000000;
+    overflow: hidden;
+}
+
+// layer container
+// ===============================
+.ly-container-wrap {
+    position: absolute;
+    max-width: 390px;
+    width: 91.25%;
+    margin: 0 auto;
+    padding-bottom: $header-height;
+    font-size: 16px;
+}
+
+.ly-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    &.is-show {
+        display: block;
+        z-index: 1000001;
+    }
+
+    &-scroll_in {
+        .ly-container-wrap {
+            left: 4.375%;
+            right: 4.375%;
+            top: 10%;
+            bottom: 10%;
+        }
+    }
+
+    &-scroll_out {
+        overflow-y: auto;
+
+        .ly-container-wrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 91.25%;
+            margin: 0 auto;
+            padding-top: 0;
+            transform: translate(-50%, -50%);
+
+            .ly-header {
+                position: relative;
+                left: auto;
+                right: auto;
+                top: auto;
+                bottom: auto;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+// layer header
+// ===============================
+.ly-header {
+    position: relative;
+    z-index: 1;
+    padding-top: 25px;
+    background-color: #fff;
+    border-top: 8px solid #5c443b;
+    border-right: 8px solid #5c443b;
+    border-left: 8px solid #5c443b;
+
+    @include bp(tablet) {
+        padding-top: 30px;
+    }
+
+    .ly-title {
+        margin: 0;
+        padding: 0;
+        font-size: 29px;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: -1.2px;
+        text-align: center;
+        color: #4e362c;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            margin: 0 auto 10px auto;
+            background-color: #4e362c;
+        }
+    }
+
+    .btn-ly-close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        z-index: 9;
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        border: 0 none;
+    }
+
+    .po-icon-main-close {
+        position: relative;
+        z-index: 9;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url('../img/layer/close.png') no-repeat 0 0;
+        background-size: 20px auto;
+    }
+}
+
+// layer contents
+// ===============================
+.ly-contents {
+    //@extend .scrollbar-style;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+    background-color: #fff;
+    border-bottom: 8px solid #5c443b;
+    border-right: 8px solid #5c443b;
+    border-left: 8px solid #5c443b;
+}
+.ly-scroll {
+
+}
+    .ly-contents-wrap {
+    position: relative;
+    z-index: 1;
+    padding: 28px 25px 44px;
+    color: #414141;
+    //@extend .scrollbar-style;
+    //max-height: 100%;
+    //overflow-x: hidden;
+    //overflow-y: auto;
+
+    p,
+    figure {
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+}
+
+
+// html or body addClass
+.ly-active {
+    //overflow: hidden;
+    //
+    //body {
+    //    overflow: hidden;
+    //}
+
+    .dimmed { display: block; }
+}
+
+@include bp(tablet){
+    .ly-contents-wrap {
+        padding: 23px 25px 50px;
+    }
+}

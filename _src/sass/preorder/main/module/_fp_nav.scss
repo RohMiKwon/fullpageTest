@@ -1,0 +1,39 @@
+#fp-nav {
+  @extend %fullpage-easingcss3;
+
+  opacity: 0;
+  visibility: hidden;
+
+  span {
+    display: none;
+  }
+
+  a{
+    width: 15px;
+    height: 14px;
+    margin: 20px;
+    background: url("../img/preorder/sp_swiper_bullet.png") no-repeat 0 0;
+    background-size: cover;
+    opacity: 1;
+
+    &.active {
+      background-position: 100% 0;
+    }
+  }
+
+  a[href="#preorder"], a[href="#footer"] {
+    display: none;
+  }
+
+  @include bp(pc) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+body[class*="fp-viewing-preorder"] #fp-nav,
+body[class*="fp-viewing-footer"] #fp-nav,
+body[class$="-1"] #fp-nav {
+  opacity: 0;
+  visibility: hidden;
+}

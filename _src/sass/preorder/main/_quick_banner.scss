@@ -1,0 +1,136 @@
+.quick-banner {
+    @extend %fullpage-easingcss3;
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @include bp(pc) {
+        position: static;
+        top: auto;
+        left: auto;
+    }
+
+    .inner {
+        //display: inline-block;
+        display: none;
+        position: relative;
+
+        .banner-m {
+            @include bp(pc) {
+                display: none;
+            }
+        }
+        .banner-pc {
+            display: none;
+
+            @include bp(pc) {
+                display: block;
+            }
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    .btn-close {
+        @include hide-text();
+
+        display: block;
+        -webkit-appearance: none;
+        position: absolute;
+        top: 12px;
+        right: 0;
+        width: 23px;
+        height: 23px;
+        font-size: 1px;
+        background: url("../img/preorder/btn_banner_close.png") no-repeat 0 0;
+        background-size: cover;
+        border: none;
+
+        @include bp(pc) {
+            right: 8px;
+            width: 30px;
+            height: 30px;
+            margin: 10px -5px 0 0;
+        }
+    }
+
+    &.lineage {
+        .inner.lineage { display: inline-block; }
+
+        img {
+            width: (205/2)+px;
+
+            @include bp(pc) {
+                width: 152px;
+            }
+        }
+    }
+
+    &.mtalk {
+        .inner.mtalk { display: inline-block; }
+        .banner-m { display: none; }
+        img { width: (152/2)+px; }
+        .btn-close {
+            top: 12px;
+            right: -11px;
+            margin: 0;
+        }
+
+        @include bp(pc) {
+            .inner.mtalk { margin-top: 17px; }
+            img { width: 98px; }
+            .btn-close {
+                top: -9px;
+                right: -12px;
+            }
+        }
+    }
+}
+
+.ANDROID {
+    .quick-banner .ios {display: none; }
+    .quick-banner .aos {display: inline-block; }
+}
+
+.IOS {
+    .quick-banner .ios {display: inline-block; }
+    .quick-banner .aos {display: none; }
+}
+
+@include bp(pc) {
+    .quick-banner .inner .banner-m { display: none; }
+}
+
+body[class*=fp-viewing] .quick-banner.is-active {
+    opacity: 0;
+    visibility: hidden;
+
+    @include bp(pc) {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// 예외처리 - 모바일 사전예약 섹션만 배너 노출
+.fp-viewing-preorder-0 .quick-banner.is-active{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+// 예외처리 - 모바일 클릭 영역 겹침 이슈
+body[class$="-1"] .quick-banner.is-active {
+    transition: all 0s cubic-bezier(0.470, 0.000, 0.745, 0.715);
+    position: absolute;
+    left: -500em;
+    z-index: -1;
+}

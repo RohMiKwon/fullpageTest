@@ -1,0 +1,105 @@
+.section-introduce .section-contents{
+    padding-left: 0;
+    padding-right: 0;
+
+    .section-title {
+        width: (585/1.9)+px;
+        height: (172/1.9)+px;
+        //background-image: url("../img/preorder/title_introduce_m.png");
+
+
+        @include bp(pc) {
+            width: 405px;
+            height: 191px;
+            //background-image: url("../img/preorder/title_introduce.png");
+        }
+    }
+}
+
+.swiper-introduce-wrap {
+    padding: 0 21px 40px;
+
+    .swiper-introduce {
+        //max-width: (246*4 + 30*3) + px;
+        max-width: 88%;
+
+        @include bp(pc) {
+            max-width: (246*4 + 30*3) + px;
+        }
+
+        .swiper-slide { position: relative; }
+
+        a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            padding: 6%;
+
+            img {
+                width: 100%;
+                z-index: 2;
+            }
+
+            @include bp(pc) {
+                padding: 21px 21px 22px 21px;
+            }
+        }
+
+        .frame {
+            width: 100%;
+
+            @include bp(pc) {
+                height: auto;
+            }
+        }
+
+        a.play {
+            display: block;
+
+            &:after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left:0;
+                background: url("../img/preorder/btn_movie_m.png") no-repeat 50% 45%;
+                background-size: 37px 37px;
+                content: '';
+                pointer-events: none;
+                opacity: .6;
+                @include transition(opacity, 1s);
+            }
+
+            &:hover {
+              &:after {
+                opacity: 1;
+                @include transition(opacity, .3s); }
+            }
+
+            @include bp(pc) {
+                &:after {
+                    background-size: 55px 55px;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .text {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 10%;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: -0.5px;
+            color: #f9dec9;
+            pointer-events: none;
+        }
+    }
+}

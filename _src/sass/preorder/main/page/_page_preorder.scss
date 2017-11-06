@@ -1,0 +1,364 @@
+.page-preorder {
+  .copy {
+    margin: 6px 0 0 0;
+    color: #545454;
+
+    @include bp(pc) {
+        margin-top: 9px;
+        padding-left: 6px;
+    }
+  }
+  // 사전등록 보상
+  .preorder-info {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    min-width: 270px;
+
+    @include bp(pc) {
+      font-size: 20px;
+    }
+
+    .info {
+      position: relative;
+      margin-top: 35px;
+
+      @include bp(pc){
+        margin-top: 70px;
+      }
+
+      strong, em {
+        color: #ff6637;
+        font-style: normal;
+      }
+
+      strong {
+        display: inline-block;
+        position: relative;
+        padding: 8px 0;
+        font-size: 12px;
+        //font-weight: normal;
+
+
+          &:before{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 19px;
+              height: 1px;
+              background: #ff6637;
+              content: '';
+          }
+
+          @include bp(pc) {
+            font-size: 14px;
+
+            &:before {
+                width: 24px;
+            }
+          }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .btn_google {
+      display: inline-block;
+      width: 188px;
+      height: 39px;
+      line-height: 37px;
+      margin: 15px 0 0;
+      padding: 0 15px;
+      border: 1px solid #b1b1b1;
+      border-radius: 2px;
+      color: #000;
+      text-decoration: none;
+      text-align: center;
+      font-size: 12px;
+      white-space: nowrap;
+
+      @include bp(pc){
+        max-width: 243px;
+        width: 242px;
+        height: 58px;
+        padding: 0 30px;
+        margin: 30px 0 0;
+        line-height: 56px;
+        font-size: 17px;
+      }
+
+      &:hover {
+        border-color: #b6804b;
+        color: #b6804b;
+      }
+
+      // googleplay
+      .text {
+        @include hide-text();
+        display: inline-block;
+        background-image: url("../img/preorder/sp_store_m.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: -4px 4px 0 0;
+        vertical-align: middle;
+
+        @include bp(pc) {
+          background-image: url("../img/preorder/sp_store.png");
+        }
+
+        &.googleplay {
+          width: 88px;
+          height: 17px;
+
+          @include bp(pc) {
+            width: 114px;
+            height: 23px;
+          }
+        }
+      }
+
+    }
+  }
+
+  //스토어
+  .store {
+    @include pie-clearfix();
+    border-top: 1px solid #ececec;
+    font-size: 15px;
+    margin: 17px 0 0;
+    padding: 20px 0 0;
+
+    .icon {
+      pointer-events: none;
+    }
+
+    @include bp(pc) {
+      margin: 35px 0 0;
+      padding: 35px 0 0;
+      font-size: 20px;
+    }
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked + label {
+
+        &:before {
+          background-position: 0 100%;
+        }
+      }
+    }
+
+    label{
+      display: inline-block;
+      position: relative;
+      float: left;
+      width: 50%;
+      text-indent: 30px;
+      line-height: 1.5;
+      letter-spacing: -0.5px;
+      cursor: pointer;
+
+      @include bp(pc) {
+        letter-spacing: inherit;
+        text-indent: 40px;
+
+        &:last-child {
+           //margin-left: 42px;
+        }
+      }
+
+      &:before {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: url("../img/preorder/input_radio.png") no-repeat 0 0;
+        background-size: cover;
+        content: '';
+        pointer-events: none;
+
+        @include bp(pc) {
+          width: 30px;
+          height: 30px;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    // googleplay
+    .text {
+      //@include hide-text();
+      display: inline-block;
+      //background-image: url("../img/preorder/sp_store_m.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      vertical-align: middle;
+
+      @include bp(pc) {
+        //background-image: url("../img/preorder/sp_store.png");
+      }
+
+      &.googleplay {
+
+        width: 100px;
+        height: 20px;
+
+        @include bp(pc) {
+          width: 145px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  // 전화번호 입력
+  .input-group-wrap {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #bc8d5d;
+    border-radius: 2px;
+    margin: 15px 0 0;
+    padding: 5px 10px;
+    text-align: right;
+    font-size: 25px;
+
+    @include bp(pc) {
+      height: 60px;
+      margin: 20px 0 0;
+      padding: 10px;
+      font-size: 22px;
+    }
+
+    .input, .select {
+      -webkit-appearance: none;
+      border: none;
+      background: none;
+      color: #bc8d5d;
+
+      @include bp(pc) {
+        letter-spacing: -0.75px;
+      }
+    }
+
+    .input {
+      width: 100%;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #a9a9a9;
+    }
+
+    :-ms-input-placeholder {
+      color: #a9a9a9;
+    }
+
+      @include bp(pc) {
+          ::-webkit-input-placeholder {
+              color: #a9a9a9;
+              font-size: 20px;
+              letter-spacing: -1px;
+          }
+
+          :-ms-input-placeholder {
+              color: #a9a9a9;
+              font-size: 20px;
+              letter-spacing: -1px;
+          }
+      }
+
+    .select-wrap {
+      position: relative;
+      display: table-cell;
+      width: 50px;
+      vertical-align: middle;
+      text-align: right;
+
+      @include bp(pc) {
+        width: 80px;
+      }
+
+      select::-ms-expand {
+        display: none;
+      }
+
+      .select {
+        display: inline-block;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        padding: 0 12px;
+
+        @include bp(pc) {
+          padding: 0 30px 0 15px;
+        }
+      }
+
+      .fe-icon-chevron_down {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -2px;
+        display: inline-block;
+        pointer-events: none;
+        vertical-align: middle;
+        @include triangle(10px, #bc8d5d, down);
+
+        @include bp(pc) {
+          @include triangle(20px, #bc8d5d, down);
+        }
+      }
+
+      &.is-active .fe-icon-chevron_down {
+        border-top: none;
+        height: auto;
+        @include triangle(10px, #bc8d5d, up);
+
+        @include bp(pc) {
+          @include triangle(20px, #bc8d5d, up);
+        }
+      }
+    }
+
+    .input-wrap {
+      display: table-cell;
+      padding: 0 5px;
+      vertical-align: middle;
+    }
+  }
+
+  // 확인 버튼
+  .btn-confirm {
+    -webkit-appearance: none;
+    display: inline-block;
+    width: 100%;
+    background: #bc8d5d;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 15px;
+    
+    &:hover {
+      background-color: #b6804b;
+    } 
+
+    @include bp(pc) {
+      height: 70px;
+      margin-top: 28px;
+      line-height: 66px;
+      font-size: 22px;
+    }
+  }
+}
+
+.pc {
+  .share-kakaotalk {
+    display: none;
+  }
+}

@@ -1,0 +1,124 @@
+.page-guild  {
+  //background: #000 url("../img/preorder/bg_guild_visual_m.jpg") no-repeat;
+  background-size: 100%;
+  background-color: sandybrown;
+
+  @include bp(pc) {
+    //background-image: url("../img/preorder/bg_guild_visual.jpg");
+    background-size: auto 100%;
+  }
+
+  .page-contents {
+    @include bp(pc) {
+      margin-top: 0;
+      //padding-right: 36px;
+    }
+  }
+
+  .page-inner {
+    @include bp(pc) {
+      max-width: 608px;
+    }
+  }
+
+  .page-contents-items {
+    padding-top: 25px;
+    padding-bottom: 24px;
+
+    @include bp(pc) {
+      padding-bottom: 40px;
+    }
+  }
+
+  .text {
+  }
+
+  .img-wrap {
+    position: relative;
+    //margin: 10px 0 9px 0;
+    margin: 20px 0 0 0;
+
+    @include bp(pc) {
+      margin-top: 34px;
+      //margin-bottom: 23px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 305px;
+      height: auto;
+
+      &.img-m {
+        @include bp(pc) { display: none; }
+      }
+
+      &.img-pc {
+        display: none;
+
+        @include bp(pc) { display: block; max-width: 455px; }
+      }
+    }
+  }
+
+  .btn-set {
+    margin-top: 20px;
+  }
+
+  .btn-guild-attention {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 32.3%;
+    height: 28%;
+    @include hide-text();
+
+    @include bp(pc) {
+      width: 119px;
+      height: 39px;
+    }
+  }
+
+  .btn-appstore {
+    margin-left: 5px;
+  }
+
+  .bonus-wrap {
+    margin-top: 15px;
+    padding: 10px 15px 14px 15px;
+    font-size: 12px;
+    line-height: 1.4;
+    background-color: #f1f1f1;
+
+    .title {
+      color: #b5804c;
+    }
+
+    strong {
+      font-weight:normal;
+      color: #b5804c;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    @include bp(pc) {
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 16px;
+      padding-left: 90px;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: -.5px;
+
+      .title {
+        position: absolute;
+        left: 25px;
+        top: 17px;
+        margin-right: 15px;
+      }
+    }
+  }
+}

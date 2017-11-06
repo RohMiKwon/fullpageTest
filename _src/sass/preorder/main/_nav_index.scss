@@ -1,0 +1,53 @@
+.nav-index {
+  @extend %fullpage-easingcss3;
+
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 7px;
+  left: 10px;
+  z-index: 100;
+
+  .btn-layer-toggle {
+    @include hide-text();
+    @extend %fullpage-easingcss3;
+
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/preorder/sp_nav_index.png");
+    background-repeat: no-repeat;
+    background-size: 40px 80px;
+    background-position: 0 0;
+    cursor: pointer;
+
+    &.is-active {
+      background-position: 0 100%;
+    }
+  }
+
+  @include bp(pc) {
+    display: none !important;
+  }
+}
+
+body[class*=fp-viewing] .nav-index {
+  opacity: 1;
+  visibility: visible;
+}
+
+body[class*=fp-viewing-preorder] .nav-index,
+body[class*=fp-viewing-preorder] .btn-layer-toggle {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body[class$="-1"] .nav-index,
+body[class$="-1"] .nav-index .btn-layer-toggle {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

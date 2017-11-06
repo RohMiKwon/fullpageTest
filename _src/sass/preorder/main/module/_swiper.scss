@@ -1,0 +1,41 @@
+.swiper-media-wrap, .swiper-introduce-wrap {
+  position: relative;
+  //margin-top: 30px;
+  margin-top: 20px;
+  padding: 0 20px 40px;
+
+  @include bp(pc) {
+    margin-top: 70px;
+  }
+
+  .swiper-slide{
+    overflow: hidden;
+  }
+
+  .swiper-pagination {
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    .swiper-pagination-bullet{
+      width: 15px;
+      height: 14px;
+      margin: 7px;
+      background: url("../img/preorder/sp_swiper_bullet.png") no-repeat 0 0;
+      background-size: cover;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-position: 100% 0;
+    }
+  }
+}
+
+.swiper-media-wrap {
+    margin-top: 10px;
+
+    @include bp(pc) {
+        margin-top: 70px;
+    }
+}

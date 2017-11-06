@@ -1,0 +1,131 @@
+.section-media .section-contents{
+    padding-left: 0;
+    padding-right: 0;
+
+  .section-title {
+    width: (562px/1.8); //562px
+    height: (173px/1.8); //158px
+    margin-top: -5px;
+    //background-image: url("../img/preorder/title_media_m.png");
+
+
+    @include bp(pc) {
+      width: 439px;
+      height: 168px;
+      margin-top: 0;
+      //background-image: url("../img/preorder/title_media.png");
+    }
+  }
+}
+
+.swiper-media-wrap {
+  .top-btn-wrap {
+    padding: 0 16px;
+    margin-top: 3px;
+    margin-bottom: -7px;
+    text-align: right;
+
+    .btn-more {
+      @include hide-text();
+
+      display: inline-block;
+      width: (44*0.5)+px;
+      height: (44*0.5)+px;
+      background-image: url("../img/preorder/btn_more_m.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+
+      @include bp(pc) {
+        width: auto;
+        height: 23px;
+        line-height: 21px;
+        text-indent: inherit;
+        padding-right: 20px;
+        background-image: url("../img/preorder/icon_arrow.png");
+        background-size: auto auto;
+        background-position: 100% 0;
+        color: #cca88c;
+        font-size: 12px;
+        text-decoration: none;
+        letter-spacing: -0.75px;
+      }
+    }
+  }
+
+  .swiper-media {
+    //max-width: (282*4 + 15*3) + px;
+    //max-width: 86%;
+    max-width: 83%;
+
+    @include bp(pc) {
+      max-width: (246*4 + 30*3) + px;
+    }
+
+    a.play {
+      display: block;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        content: '';
+        transition: all 300ms ease-in-out;
+        pointer-events: none;
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:0;
+        background: url("../img/preorder/btn_movie_m.png") no-repeat 50% 50%;
+        background-size: 55px 55px;
+        content: '';
+        pointer-events: none;
+        opacity: .6;
+        @include transition(opacity, 1s);
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+          @include transition(opacity, .3s);
+        }
+      }
+
+      @include bp(pc) {
+        &:hover:before{
+          //background-image: url("../img/preorder/cover_media_over.png");
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+
+    .text {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 35px;
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: -0.5px;
+      color: #f9dec9;
+      pointer-events: none;
+
+      @include bp(pc) {
+        bottom: 52px;
+      }
+    }
+  }
+}
+

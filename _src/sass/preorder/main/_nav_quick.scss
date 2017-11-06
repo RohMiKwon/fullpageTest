@@ -1,0 +1,162 @@
+.nav-quick {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  @extend %fullpage-easingcss3;
+
+  // 모바일
+  .text {
+    position: absolute;
+    top: 49%;
+    right: 30px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -70px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.4em;
+    text-align: center;
+    white-space: nowrap;
+    color: #cda586;
+    background-color: #000;
+    opacity: 1;
+    transition: all .3s;
+    vertical-align: middle;
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -5px;
+      width: 0;
+      height: 0;
+      margin-top: -5px;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-color: transparent;
+      border-left-color: #000;
+      vertical-align: middle;
+    }
+
+    @include bp(pc) {
+      position: static;
+      top: inherit;
+      left:  inherit;
+      right: auto;
+      width: auto;
+      margin-top: 0;
+      margin-left: 0;
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+      font-size: inherit;
+      line-height: inherit;
+      text-align: left;
+      opacity: .6;
+      transition: all .3s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:after{
+        display: none;
+      }
+    }
+  }
+
+  .q1 {
+    .bul {
+      display: inline-block;
+      width: 20px;
+      height: 23px;
+      background-image: url(../img/preorder/img_community_m.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .q2 {
+    display: none;
+  }
+  // 모바일
+
+  .quick-community {
+    @include pie-clearfix();
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .quick-community a {
+    display: block;
+    text-decoration: none;
+  }
+
+  @include bp(pc) {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+
+    .quick-items {
+      display: table;
+      margin-bottom: 1px;
+      width: 100%;
+      height: 61px;
+      border-radius: 0;
+      text-align: left;
+      background-color: rgba(0, 0, 0, 0.35);
+
+      &:hover{
+        a { color: #fff; }
+      }
+    }
+
+    .quick-community a {
+      height: 100%;
+      display: table-cell;
+      padding: 0 28px 0 28px;
+      vertical-align: middle;
+      color: rgba(255,255,255,.5);
+      text-decoration: none;
+      transition: all .5s ease;
+    }
+
+    .q1 .bul, .q2 .bul {
+      display: inline-block;
+      width: 22px;
+      height: 23px;
+      background: url(../img/preorder/quick_t.png) no-repeat;
+      vertical-align: middle;
+      margin: -2px 8px 0 0;
+    }
+
+    .q1 {
+      .bul {
+        background-position: 0 -44px;
+      }
+
+      a:hover .bul{
+        background-position: 0 -44px;
+      }
+    }
+
+    .q2 {
+      .bul {
+        background-position: 0 -91px;
+      }
+
+      a:hover .bul{
+        background-position: 0 -91px;
+      }
+    }
+  }
+}
+
+body[class$="-1"] .nav-quick {
+  opacity: 0;
+  visibility: hidden;
+}

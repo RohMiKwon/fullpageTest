@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+	<title>타이틀</title>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="../css/preorder.css">
+</head>
+
+<body class="pc UNKNOWN page-sub">
+
+<div class="bg-movie-wrap">
+	<div id="bg-movie" class="bg-movie"></div>
+</div>
+
+<nav class="nav-index">
+	<a href="#layer-index" class="btn-layer-toggle">메뉴 레이어</a>
+	<div id="layer-index" class="layer-index">
+		<div class="layer-inner">
+			<ul class="menu-list">
+				<li><a href="#preorder" class="logo">로고</a></li>
+				<li><a href="#character">메뉴1</a></li>
+				<li><a href="#guild">메뉴2</a></li>
+				<li><a href="#minigame">메뉴3</a></li>
+				<li><a href="#media">메뉴4</a></li>
+				<li><a href="#introduce">메뉴5</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<nav class="nav-quick">
+	<ul class="quick-community">
+		<li class="quick-items q1"><a href="#"><span class="bul"></span><span class="text">말풍선</span></a></li>
+	</ul>
+	<div id="quick-banner" class="quick-banner mtalk"  data-cookie-value="mtalk">
+		<div class="inner">
+			<a href="#" target="_blank" class="banner-pc"><img src=""></a>
+			<a href="#" target="_blank" class="banner-m"><img src=""></a>
+			<button type="button" class="btn-close" data-close="dismiss">오늘 하루동안 보지 않기 </button>
+		</div>
+	</div>
+</nav>
+
+<div id="preorder-main">
+	<div class="section section-preorder">
+		<div id="menu-wrap" class="menu-wrap">
+			<div id="flip-menu" class="flip-menu">
+				<div class="flip-container media">
+					<a href="#media" class="flipper">
+						<span class="front"><span class="icon-wrap"><i class="icon-new">NEW</i></span></span>
+						<span class="back"><span class="icon-wrap"><i class="icon-new">NEW</i></span></span>
+						<span class="text">메뉴1</span>
+					</a>
+				</div>
+				<div class="flip-container introduce">
+					<a href="#introduce" class="flipper">
+						<span class="front"></span>
+						<span class="back"></span>
+						<span class="text">메뉴2</span>
+					</a>
+				</div>
+				<div class="flip-container character is-active">
+					<a href="#character" class="flipper">
+						<span class="front"><span class="icon-wrap"><i class="icon-new">NEW</i></span></span>
+						<span class="back"><span class="icon-wrap"><i class="icon-new">NEW</i></span></span>
+						<span class="text">메뉴3</span>
+					</a>
+				</div>
+				<div class="flip-container guild">
+					<a href="#guild" class="flipper">
+						<span class="front"><span class="icon-wrap"><i class="icon-new">NEW</i></span></span></span>
+						<span class="back"><span class="icon-wrap"><i class="icon-new">NEW</i></span></span></span>
+						<span class="text">메뉴4</span>
+					</a>
+				</div>
+				<div class="flip-container minigame">
+					<a href="#minigame" class="flipper">
+						<span class="front"></span>
+						<span class="back"></span>
+						<span class="text">메뉴5</span>
+					</a>
+				</div>
+			</div>
+
+			<div id="swiper-menu" class="swiper-container menu-list">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" data-section-id="character"><span class="menu character"><div class="icon-wrap"><i class="icon-new">NEW</i></div>메뉴1</span></div>
+					<div class="swiper-slide" data-section-id="guild"><span class="menu guild"><div class="icon-wrap"><i class="icon-new">NEW</i></div>메뉴2</span></div>
+					<div class="swiper-slide" data-section-id="minigame"><span class="menu minigame">메뉴3</span></div>
+					<div class="swiper-slide" data-section-id="media"><span class="menu media"><div class="icon-wrap"><i class="icon-new">NEW</i></div>메뉴4</span></div>
+					<div class="swiper-slide" data-section-id="introduce"><span class="menu introduce">메뉴5</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="section-contents">
+				<div class="sc-bg"></div>
+				<h1 class="section-title">섹션 타이틀</h1>
+				<a href="#preorder/1" class="btn-preorder">버튼</a>
+				<span class="preorder-info-text">설명</span>
+			</div>
+		</div>
+		<div class="slide page-preorder">
+			<div class="page-container">
+				<div class="page-contents">
+					<div class="page-visual preorder"></div>
+					<div class="page-inner">
+						<h2 class="page-title">상세 페이지 타이틀</h2>
+						<p class="copy">설명</p>
+						<div class="rewards">
+							<img src="" class="pc">
+							<img src="" class="mobile">
+							<p class="text">이미지 설명</span></p>
+						</div>
+						<div class="store">
+							<input type="radio" id="googleplay1" name="store" value="1"><label for="googleplay1"><span class="radio"></span><span class="text">라벨 텍스트</span></label>
+							<input type="radio" id="appstore1" name="store" value="2"><label for="appstore1"><span class="radio"></span><i class="text">라벨 텍스트</i></label>
+						</div>
+						<div class="input-group-wrap">
+							<div class="select-wrap">
+								<select name="phoneType" id="phoneType" class="select">
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select>
+								<i class="fe-icon-chevron_down"></i>
+							</div>
+							<div class="input-wrap">
+								<input type="tel" class="input" name="phoneNumber" placeholder="-제외 후 입력" maxlength="8">
+							</div>
+						</div>
+						<div class="terms-area">
+							<div class="terms-agree">
+								<div class="input-wrap">
+									<input id="preorderAgreementUsage" type="checkbox">
+									<label for="preorderAgreementUsage" class="ui-custom-check">
+										<span class="custom-btn"></span>
+										<span class="label-text">라벨텍스트</span>
+									</label>
+								</div>
+								<a href="#termsPanel" class="btn-terms" data-module-id="toggle" data-toggle-target="#termsPanel">버튼명</a>
+							</div>
+							<div id="termsPanel" class="panel">
+								<iframe src="agreement.html" scrolling="yes"></iframe>
+							</div>
+							<div class="terms-agree">
+								<div class="input-wrap">
+									<input id="preorderPersonalData2" type="checkbox">
+									<label for="preorderPersonalData2" class="ui-custom-check">
+										<span class="custom-btn"></span>
+										<span class="label-text">라벨텍스트</span>
+									</label>
+								</div>
+								<a href="#termsPanel2" class="btn-terms" data-module-id="toggle" data-toggle-target="#termsPanel2">버튼명</a>
+							</div>
+							<div id="termsPanel2" class="panel">
+								<iframe src="agreement.html" scrolling="yes"></iframe>
+							</div>
+						</div>
+
+						<button type="button" class="btn btn-confirm">버튼명</button>
+
+						<ul class="preorder-info">
+							<li class="info info1">
+								<strong>타이틀</strong>
+								<p>타이틀 설명<br> <em>강조</em> 타이틀 설명</p>
+							</li>
+							<li class="info info2">
+								<strong>타이틀</strong>
+								<p>타이틀 설명<br> <em>강조</em> 타이틀 설명</p>
+								<!--<span class="item item2">오른쪽 이미지</span>-->
+							</li>
+						</ul>
+					</div>
+					<a href="#preorder" class="page-back">뒤로</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-character">
+		<div class="sc-bg"></div>
+
+		<div class="section-contents">
+			<h1 class="section-title">섹션 타이틀</h1>
+			<p class="sub-copy">타이틀 설명</p>
+		</div>
+	</div>
+
+	<div class="section section-guild">
+		<div class="sc-bg"></div>
+
+		<div class="slide">
+			<div class="section-contents">
+				<h1 class="section-title">섹션 타이틀</h1>
+				<p class="sub-copy">타이틀 설명</p>
+				<div class="more-wrap">
+					<a href="#guild/1">상세보기</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-back-pc"><a href="#guild" class="page-back">뒤로</a></div>
+
+		<div class="slide page-guild">
+			<div class="page-container">
+				<div class="page-contents">
+					<div class="page-visual minigame"></div>
+					<div class="page-inner">
+						<h2 class="page-title">상세 페이지 타이틀</h2>
+						<ul class="page-contents-list">
+							<li class="page-contents-items">
+								<strong class="tag">태그</strong>
+								<div class="description">
+									<p class="text">텍스트<em>강조</em> 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄</p>
+								</div>
+							</li>
+							<li class="page-contents-items">
+								<strong class="tag">태그</strong>
+								<div class="description">
+									<p class="text">텍스트<em>강조</em> 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<a href="#guild" class="page-back">뒤로</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-minigame">
+		<div class="sc-bg"></div>
+
+		<div class="slide">
+			<div class="section-contents">
+				<h1 class="section-title">섹션 타이틀</h1>
+				<ul class="link-list">
+					<li><p class="text">설명</span></p> <a href="#minigame/1" class="btn">버튼명</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="page-back-pc"><a href="#minigame" class="page-back">뒤로</a></div>
+
+		<div class="slide page-minigame">
+			<div class="page-container">
+				<div class="page-contents">
+					<div class="page-visual minigame"></div>
+					<div class="page-inner">
+						<h2 class="page-title">상세 페이지 타이틀</h2>
+						<ul class="page-contents-list">
+							<li class="page-contents-items">
+								<strong class="tag">태그</strong>
+								<div class="description">
+									<p class="text">텍스트<em>강조</em> 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄</p>
+								</div>
+							</li>
+							<li class="page-contents-items">
+								<strong class="tag">태그</strong>
+								<div class="description">
+									<p class="text">텍스트<em>강조</em> 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄 텍스트 여러줄</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<a href="#minigame" class="page-back">뒤로</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-media">
+		<div class="sc-bg"></div>
+
+		<div class="section-contents">
+			<h1 class="section-title">섹션 타이틀</h1>
+
+			<div class="swiper-media-wrap">
+				<div id="swiper-media" class="swiper-container swiper-media">
+					<div class="top-btn-wrap">
+						<a href="#" class="btn-more">버튼</a>
+					</div>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#" class="play" data-youtube-id="youtubeid" data-module-id="youtube"><img width="279" height="360" src=""><span class="text">슬라이더1</span></a></div>
+						<div class="swiper-slide"><a href="#" class="play" data-youtube-id="youtubeid" data-module-id="youtube"><img width="279" height="360" src=""><span class="text">슬라이더2</span></a></div>
+						<div class="swiper-slide"><a href="#" class="play" data-youtube-id="youtubeid" data-module-id="youtube"><img width="279" height="360" src=""><span class="text">슬라이더3</span></a></div>
+						<div class="swiper-slide"><a href="#" class="play" data-youtube-id="youtubeid" data-module-id="youtube"><img width="279" height="360" src=""><span class="text">슬라이더4</span></a></div>
+					</div>
+				</div>
+				<div id="swiper-media-pagination" class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-introduce">
+		<div class="sc-bg"></div>
+
+		<div class="section-contents">
+			<h1 class="section-title">섹션 타이틀</h1>
+
+			<div class="swiper-introduce-wrap">
+				<div id="swiper-introduce" class="swiper-container swiper-introduce">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#" class="play" data-youtube-id="youtubeid" data-module-id="youtube"><img width="375" height="458" src=""><span class="text">슬라이더1</span></a></div>
+						<div class="swiper-slide"><a href="#" class="play" data-youtube-id="youtubeid" data-module-id="youtube"><img width="375" height="458" src=""><span class="text">슬라이더2</span></a></div>
+						<div class="swiper-slide"><a href="#" class="play" data-youtube-id="youtubeid" data-module-id="youtube"><img width="375" height="458" src=""><span class="text">슬라이더3</span></a></div>
+						<div class="swiper-slide"><a href="#" class="play" data-youtube-id="youtubeid" data-module-id="youtube"><img width="375" height="458" src=""><span class="text">슬라이더4</span></a></div>
+					</div>
+				</div>
+				<div id="swiper-introduce-pagination" class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-footer fp-auto-height">
+		<div class="section-event-caution">
+			<div class="btn-wrap">
+				<a href="#layerEventNotice" class="btn btn-event-notice" data-layer="layerEventNotice">레이어 오픈 버튼</a>
+			</div>
+		</div>
+		<p class="copy">푸터 카피</p>
+	</div>
+</div>
+
+<div class="dimmed"></div>
+
+<div id="layerCheckPreorder" class="ly-container ly-container-scroll_in ly-check-preorder">
+	<div class="ly-container-wrap">
+		<div class="ly-header">
+			<button class="btn btn-ly-close" data-close="dismiss"><i class="po-icon-main-close"></i></button>
+		</div>
+		<div class="ly-contents">
+			<div class="ly-contents-wrap">
+
+				<div class="preorder-wrap">
+					<p>사전예약 후 참여 가능합니다. </p>
+					<a href="#preorder" id="btn-gotopreorder" class="btn btn-gotopreorder active">확인</a>
+				</div>
+
+				<p class="description">이미 사전예약을 완료 하셨다면 <br> 등록한 번호를 입력해주세요.</p>
+
+				<div class="store">
+					<input type="radio" id="googleplay222" name="phoneType222" value="1"><label for="googleplay222"><span class="radio"></span>Google Play</label>
+					<input type="radio" id="appstore222" name="phoneType222" value="2"><label for="appstore222"><span class="radio"></span>App Store</label>
+				</div>
+
+				<div class="input-group-wrap">
+					<div class="select-wrap">
+						<select name="phoneNumberSelect222" id="" class="select">
+							<option value="010" selected>010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+						</select>
+						<i class="fe-icon-chevron_down"></i>
+					</div>
+					<div class="input-wrap">
+						<input type="tel" class="input" name="phoneNumber222" placeholder="-제외 후 입력" maxlength="8">
+					</div>
+				</div>
+				<button type="button" class="btn btn-confirm active">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="layerEventNotice" class="ly-container ly-container-scroll_in layer-event-notice">
+	<div class="ly-container-wrap">
+		<div class="ly-header">
+			<h1 class="ly-title">레이어 타이틀</h1>
+			<button class="btn btn-ly-close" data-close="dismiss"><i class="po-icon-main-close"></i></button>
+		</div>
+
+		<div class="ly-contents">
+			<div class="ly-contents-wrap">
+				레이어 컨텐츠
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="loading-page">
+	<div class="counter">
+		<p class="logo">상단 로고</p>
+		<h1>0%</h1>
+		<hr/>
+		<p class="logo2">하단 로고</p>
+	</div>
+</div>
+
+<div class="loading-landscape-mode">
+	<span class="thumb"></span>
+	<p class="desc">본 화면은 세로모드에 최적화되어 있습니다.</p>
+	<p class="desc2">기기를 세로방향으로 돌려주세요.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="../js/preorder.vendor.min.js"></script>
+<script src="../js/preorder.dev.js"></script>
+
+<script>
+	var videoConfig = {
+		pc: {
+			autoplay: 'true',
+			poster: '',
+			movieUrl: ''
+		},
+		mobile: {
+			autoplay: 'true',
+			poster: '',
+			movieUrl: ''
+		}
+	};
+</script>
+
+<script>
+	var menuConfig = [{
+		sectionId: "preorder",
+		isActive: "true",
+		order: "1"
+	},
+		{
+			sectionId: "character",
+			isActive: "true",
+			order: "2"
+		},
+		{
+			sectionId: "guild",
+			isActive: "true",
+			order: "3"
+		},
+		{
+			sectionId: "minigame",
+			isActive: "true",
+			order: "4"
+		},
+		{
+			sectionId: "media",
+			isActive: "true",
+			order: "5"
+		},
+		{
+			sectionId: "introduce",
+			isActive: "true",
+			order: "6"
+		},
+		{
+			sectionId: "footer",
+			isActive: "true",
+			order: "99"
+		},
+		{
+			sectionId: "",
+			isActive: "",
+			order: ""
+		}];
+</script>
+
+<script>
+	$(function(){
+		new helloworld.Main(videoConfig, menuConfig);
+
+		var layer = new helloworld.Layer($('#layerEventNotice'));
+		$('.btn-event-notice').on('click', function(){
+			layer.show();
+		});
+	});
+</script>
+</body>
+</html>

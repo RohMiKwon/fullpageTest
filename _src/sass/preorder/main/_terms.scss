@@ -1,0 +1,135 @@
+.terms-area {
+  margin-top: 7px;
+
+  @include bp(pc) {
+    margin-top: 15px;
+  }
+
+  .panel {
+    display: none;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #eee;
+    background-color: #fff;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  iframe {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 100px;
+  }
+
+  .terms-agree {
+    position: relative;
+    padding: 4px 0;
+    letter-spacing: -0.5px;
+
+    @include bp(pc) {
+      padding: 6px 0;
+    }
+
+    input {
+      position: absolute;
+      left: -999em;
+    }
+
+    label {
+      position: relative;
+      display: inline-block;
+      min-height: 13px;
+      font-size: 14px;
+      line-height: 1.5;
+      cursor: pointer;
+      letter-spacing: -1px;
+
+      @include bp(pc) {
+        min-height: 26px;
+        font-size: 15px;
+      }
+
+      .custom-btn {
+        position: relative;
+        display: inline-block;
+        top: -1px;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #a9a9a9;
+        margin-right: 4px;
+        vertical-align: middle;
+
+        @include bp(pc) {
+          width: 26px;
+          height: 26px;
+        }
+      }
+
+      .label-text {
+        display: inline-block;
+        opacity: .7;
+      }
+    }
+
+    input:checked + label .custom-btn,
+    label.is-checked .custom-btn {
+      background: url("../img/preorder/input_check.png") no-repeat 50% 50%;
+      background-size: 18px auto;
+      border-color: #bc8d5d;
+
+      @include bp(pc) {
+        background-size: 24px auto;
+      }
+    }
+
+    .btn-terms {
+      position: absolute;
+      right: 0;
+      top: 10%;
+      padding: 4px 6px 3px;
+      font-size: 12px;
+      text-decoration: none;
+      letter-spacing: -1px;
+      background: #e6e7e9;
+      color: #7e7e7e;
+      
+      &:hover {
+        background-color: #b6804b;
+        color: #fff;
+      }
+
+      @include bp(pc) {
+        font-size: 12px;
+      }
+
+      .fe-icon-chevron_down {
+        @include triangle(11px, rgba(0,0,0,.5), down);
+        position: absolute;
+        top: 6px;
+        right: 0;
+      }
+
+      &.is-active .fe-icon-chevron_down {
+        @include triangle(11px, rgba(0,0,0,.5), up);
+
+        border-top: none;
+      }
+    }
+  }
+
+  & + .terms-area {
+    margin-top: 0 !important;
+    border-top: 1px solid rgba(#000, .2);
+  }
+}
+
+.pc {
+  .terms-area .panel {
+    overflow-y: hidden;
+  }
+}

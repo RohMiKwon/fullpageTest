@@ -1,0 +1,142 @@
+/* Slider */
+.slick-slider {
+    position: relative;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    .slick-track,
+    .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    button {
+        display: inline-block;
+        border: 0;
+        vertical-align: middle;
+        background-color: transparent;
+    }
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus { outline: none; }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    outline: none;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after { clear: both; }
+
+    .slick-loading & { visibility: hidden; }
+}
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    outline: none;
+    img { display: block; }
+    &.slick-loading img { display: none; }
+    &.dragging img { pointer-events: none; }
+
+    [dir="rtl"] & { float: right; }
+    .slick-initialized & { display: block; }
+    .slick-loading & { visibility: hidden; }
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden { display: none; }
+
+
+// MXM Theme
+// ======
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 30px;
+    margin-top: -15px;
+    text-indent: -999em;
+    font-size: 0;
+    //background-image: url($static+'/layout/slick_arrow.png');
+    //background-repeat: no-repeat;
+    &:focus { outline: 0; }
+    &:active { margin-top: -14px; }
+}
+.slick-prev {
+    left: 21px;
+    background-position: 0 -0;
+}
+
+.slick-next {
+    right: 21px;
+    background-position: 0 -30px;
+}
+
+.slick-dots {
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 10px;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    list-style: none;
+    text-align: center;
+    li {
+        display: inline-block;
+        line-height: 0;
+        button {
+            overflow: hidden;
+            width: 10px;
+            height: 2px;
+            margin-left: 2px;
+            border: 0;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -999em;
+            background: #bed5e3;
+            &:focus { outline: 0; }
+        }
+
+        &:first-child { padding-left: 0; }
+
+        &.slick-active {
+            button{ background-color: #7ca8c2; }
+        }
+    }
+}

@@ -1,0 +1,304 @@
+.page-container{
+    @include pie-clearfix();
+
+    height:100%;
+    font-size: 13px;
+
+    @include bp(pc){
+        font-size: 15px;
+    }
+}
+//
+//.page-visual {
+//  opacity: 0;
+//  visibility: hidden;
+//  position: absolute;
+//  top: 0;
+//  right: -500em;
+//  width: 0; //for ios
+//  height: 30vh;
+//  background-repeat: repeat-x;
+//  background-position: 50% 0;
+//  background-size: cover;
+//  pointer-events: none;
+//
+//  @include bp(pc) {
+//    width: 100%;
+//    height: 100%;
+//    background-position: 0 0;
+//  }
+//}
+//
+//.page-visual.active {
+//  right: 0;
+//  opacity: 1;
+//  visibility: visible;
+//  width: 100%; //for ios
+//}
+
+
+.page-contents{
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+    margin-top: 260px;
+    //margin-top: 150px;
+    //padding: 40px 30px;
+    padding: 40px 0;
+    background: #fff;
+
+    @include bp(pc) {
+        float:right;
+        width: 768px;
+        padding: 95px 124px;
+        margin-top: 0;
+    }
+}
+
+.page-preorder .page-contents {
+    padding: 40px 30px;
+
+    .page-title { padding-left: 0; }
+
+    @include bp(pc) { padding: 95px 124px; }
+}
+
+.page-inner{
+    margin: 0 auto;
+    text-align: left;
+
+    @include bp(pc) {
+        //max-width: 440px;
+    }
+}
+
+.page-back{
+    @include hide-text();
+
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    //z-index: 1;
+    z-index: 101;
+    background: url("../img/preorder/btn_page_back_m.png") no-repeat 50% 50%;
+    background-size: 24px 19px;
+
+    @include bp(pc) {
+        display: none;
+        //top:50%;
+        //left: -140px;
+        width: 94px;
+        height: 40px;
+        background-image: url("../img/preorder/btn_page_back.png");
+        background-size: auto;
+    }
+}
+
+.section-guild,
+.section-minigame {
+    .page-back {
+        top: -254px;
+        left: 8px;
+        background-image: url("../img/preorder/btn_page_back_light_m.png");
+
+        @include bp(pc) {
+            top: 50%;
+            left: -140px;
+            background-image: url("../img/preorder/btn_page_back.png");
+        }
+    }
+}
+
+.page-back-pc {
+    display: none;
+
+    @include bp(pc) {
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        right: 768px;
+        width: 1px;
+        z-index: 99;
+
+        .page-back {
+            position: absolute;
+            top: 50%;
+            left: -139px;
+            z-index: 100;
+            margin-top: -20px;
+        }
+    }
+}
+.fp-viewing-preorder-0,
+.fp-viewing-guild-0,
+.fp-viewing-minigame-0 {
+    .page-back-pc {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+.fp-viewing-preorder-1,
+.fp-viewing-guild-1,
+.fp-viewing-minigame-1 {
+    .page-back-pc {
+        z-index: 99;
+        @include transition(opacity, .5s);
+        @include transition-delay(.5s);
+
+        .page-back { display: block; }
+    }
+}
+
+.page-title {
+    margin: 0;
+    padding: 0 30px;
+    text-align: left;
+    font-size: 29px;
+    font-weight: normal;
+    letter-spacing: -1.5px;
+    color: #000;
+    word-break: keep-all;
+
+    .only-pc {
+        display: none;
+    }
+
+    @include bp(pc) {
+        padding-left: 0;
+        font-size: 44px;
+        letter-spacing: -2px;
+        word-spacing: -3px;
+
+        .only-pc { display: inline; }
+    }
+}
+
+.page-preorder {
+    background: #fff;
+
+    .page-contents {
+        margin-top: 0;
+    }
+
+    .page-back{
+        top: 0;
+    }
+
+
+    @include bp(pc) {
+        background: none;
+
+        .page-back{
+            top: 50%;
+        }
+    }
+}
+
+// section slide contents common
+.page-contents-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include bp(pc) {
+        padding-top: 12px;
+    }
+
+    & > li {
+        padding: 30px 30px 27px 30px;
+        border-bottom: 1px solid #dfdfdf;
+        @include pie-clearfix();
+
+        &:last-child { border-bottom: 0 none; }
+
+        @include bp(pc) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .tag {
+        display: inline-block;
+        float: left;
+        min-width: 43px;
+        border-radius: 500em;
+        background-color: #5c443b;
+        margin-right: 10px;
+        padding: 4px 8px 3px;
+        font-weight: normal;
+        text-align: center;
+        font-size: 0.867em; // pc 기준 15px : 13px
+        color: #fff;
+        line-height: 1.4;
+
+        @include bp(pc) {
+            min-width: 52px;
+            height: 24px;
+            padding-top: 3px;
+            font-size: 13px;
+
+        }
+    }
+
+    .description {
+        overflow: hidden;
+    }
+
+    .text {
+        margin: 0;
+        //line-height: 22px;
+        line-height: 1.3;
+
+        @include bp(pc) {
+            line-height: 1.5;
+            letter-spacing: -.7px;
+        }
+
+        em {
+            font-style: normal;
+            color: #bc8d5d;
+        }
+
+        br {
+            &.only-m { display: block; }
+            &.only-pc { display: none; }
+
+            @include bp(pc) {
+                display: block;
+
+                &.only-m { display: none; }
+                &.only-pc { display: block; }
+            }
+        }
+    }
+
+    .btn-googleplay,
+    .btn-appstore {
+        display: inline-block;
+        width: (210px/2);
+        height: (74px/2);
+        background: url('../img/preorder/sp_btn_download_m.png') no-repeat;
+        background-size: auto (74px/2);
+        @include hide-text();
+
+        @include bp(pc) {
+            width: 130px;
+            height: 46px;
+            background-image: url('../img/preorder/sp_btn_download.png');
+            background-size: auto 46px;
+        }
+    }
+
+    .btn-appstore {
+        width: (200px/2);
+        background-position: right top;
+
+        @include bp(pc) {
+            width: 130px;
+        }
+    }
+}

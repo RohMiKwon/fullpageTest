@@ -1,0 +1,81 @@
+@include bp(pc) {
+  body {overflow-y:hidden !important} /* reset 필요 */
+}
+
+.nc-cnb {
+  display: none;
+}
+
+.fullpage-wrapper{
+  z-index: 30;
+}
+
+.section {
+  text-align: center;
+
+  .slide {
+    .sc-bg {
+        //@include bp(pc) {
+        //    width: 50% !important;
+        //}
+    }
+  }
+  .sc-bg {
+    opacity: 0;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: cover;
+  }
+}
+
+.section-contents{
+  margin: 0 auto;
+  padding:  13% 20px 0 20px;
+
+  @include bp(pc) {
+    padding-top: 114px;
+  }
+}
+
+.section-title {
+  //@include hide-text();
+
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  transition: all .5s ease;
+  color: #fff;
+}
+
+// load
+.fp-enabled {
+  .sc-bg {
+    opacity: 1;
+  }
+}
+
+//모달 동영상 닫기 버튼
+.layerClose {
+  top: -46px;
+  right: 2px;
+  display: block;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  text-align: left;
+  background: url("../img/preorder/layer_close.png") no-repeat;
+}
+
+
+@media screen and ( max-height: 500px ){
+  .section-contents {
+    padding-top: 0;
+  }
+}

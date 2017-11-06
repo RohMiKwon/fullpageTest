@@ -1,0 +1,207 @@
+.ly-check-preorder {
+    .ly-header {
+        z-index: 1000;
+    }
+    .ly-header {
+        background: #f2f2f2;
+    }
+
+    .ly-contents-wrap {
+    }
+
+    .ly-contents {
+        text-align: center;
+
+        .btn {
+            -webkit-appearance: none;
+            display: inline-block;
+            width: 100%;
+            padding: 12px 0;
+            background: #ddd;
+            border: none;
+            border-radius: 2px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+
+            &.active {
+                background: #bc8d5d;
+            }
+        }
+    }
+
+    .preorder-wrap {
+        margin-top: -28px;
+        margin-left: -25px;
+        margin-right: -25px;
+        padding: 20px 25px 30px;
+        background: #f2f2f2;
+
+        .btn-gotopreorder {
+            margin-top: 15px;
+        }
+    }
+    .description {
+        margin-top: 15px;
+    }
+
+    //스토어
+    .store {
+        @include pie-clearfix();
+        font-size: 14px;
+        margin: 30px 0 0;
+
+        .icon {
+            pointer-events: none;
+        }
+
+        input[type="radio"] {
+            display: none;
+
+            &:checked + label {
+
+                &:before {
+                    background-position: 0 100%;
+                }
+            }
+        }
+
+        label{
+            display: inline-block;
+            position: relative;
+            float: left;
+            width: 50%;
+            text-indent: 20px;
+            cursor: pointer;
+            text-align: left;
+
+            &:before {
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                margin-top: 4px;
+                background: url("../img/preorder/input_radio.png") no-repeat 0 0;
+                background-size: cover;
+                content: '';
+                pointer-events: none;
+            }
+        }
+    }
+
+    // 전화번호 입력
+    .input-group-wrap {
+        position: relative;
+        display: table;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #bc8d5d;
+        border-radius: 2px;
+        margin: 14px 0 10px;
+        padding: 5px 10px;
+        text-align: right;
+        font-size: 15px;
+
+        .input, .select {
+            -webkit-appearance: none;
+            border: none;
+            background: none;
+            color: #bc8d5d;
+            font-size: 14px;
+        }
+
+        .input {
+            width: 100%;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #a9a9a9;
+        }
+
+        :-ms-input-placeholder {
+            color: #a9a9a9;
+        }
+
+        .select-wrap {
+            position: relative;
+            display: table-cell;
+            width: 40px;
+            vertical-align: middle;
+            text-align: right;
+
+            select::-ms-expand {
+                display: none;
+            }
+
+            .select {
+                display: inline-block;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                padding: 0 12px 0 0;
+            }
+
+            .fe-icon-chevron_down {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -2px;
+                display: inline-block;
+                pointer-events: none;
+                vertical-align: middle;
+                @include triangle(10px, #bc8d5d, down);
+            }
+
+            &.is-active .fe-icon-chevron_down {
+                border-top: none;
+                height: auto;
+                @include triangle(10px, #bc8d5d, up);
+            }
+        }
+
+        .input-wrap {
+            display: table-cell;
+            padding: 0 5px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.layer-event-notice {
+    .ly-contents {
+        .caution-block {
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0 0 2px 0;
+            font-size: 19px;
+            letter-spacing: -.8px;
+            font-weight: normal;
+            color: #ff6637;
+        }
+
+        ol {
+            margin: 0.5em 1em;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+                margin-top: 4px;
+                font-size: 15px;
+                line-height: 1.5em;
+                color: #414141;
+                letter-spacing: -.7px;
+            }
+        }
+
+        ol + .addition {
+            margin-top: 20px;
+        }
+
+        .addition {
+            margin-top: 10px;
+        }
+    }
+}

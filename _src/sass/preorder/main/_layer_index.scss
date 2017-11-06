@@ -1,0 +1,62 @@
+.layer-index {
+  @extend %fullpage-easingcss3;
+
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #15100f;
+
+  .layer-inner {
+    position: relative;
+  }
+
+  .menu-list {
+    list-style: none;
+    margin: 82px auto 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      height: 70px;
+      line-height: 68px;
+      //background: url('../img/preorder/menu/line_m.png') no-repeat center bottom;
+      background-size: 320px auto;
+    }
+
+    a {
+      display: block;
+      color: #cda586;
+      text-decoration: none;
+    }
+
+    .logo {
+      //@include hide-text();
+
+      width: (288/2)+px;
+      height: (67/2)+px;
+      margin: 0 auto;
+      //background: url("../img/preorder/logo_s.png") no-repeat 0 0;
+      background-size: contain;
+    }
+
+    .prepare {
+      cursor: default;
+      color: rgba(#cda586, .15);
+    }
+  }
+
+  .btn-community {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.layer-index.is-active {
+  opacity: 1;
+  visibility: visible;
+}

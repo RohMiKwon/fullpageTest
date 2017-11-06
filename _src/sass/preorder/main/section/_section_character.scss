@@ -1,0 +1,42 @@
+.section-character .section-contents {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: (26*0.5)+1+px;
+  letter-spacing: -0.5px;
+  color: #b87930;
+
+  @include bp(pc) {
+    font-size: 16px;
+  }
+
+  .section-title {
+    width: (619/2)+px;
+    height: (196/2)+px;
+    //background-image: url("../img/preorder/title_character_m.png");
+
+    @include bp(pc) {
+      width: 657px;
+      height: 188px;
+      //background-image: url("../img/preorder/title_character.png");
+    }
+  }
+
+  .sub-copy {
+    //@include hide-text();
+
+    width: (617*0.5)+px;
+    height: (45*0.5)+px;
+    //background: url("../img/preorder/txt_subcopy_character_m.png") no-repeat 0 0;
+    background-size: cover;
+    margin: 25px auto 0;
+
+    @include bp(pc) {
+      width: 491px;
+      height: 45px;
+      margin-top: 55px;
+      //background: url("../img/preorder/txt_subcopy_character.png") no-repeat 0 0;
+    }
+  }
+}
+
+

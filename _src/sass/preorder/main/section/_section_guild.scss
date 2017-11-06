@@ -1,0 +1,79 @@
+.section-guild {
+    position: relative;
+}
+
+.section-guild .section-contents {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include bp(pc) {
+        padding-top: 123px;
+    }
+
+    .section-title {
+        width: (549/1.8)+px;
+        height: (198/1.8)+px;
+        //background-image: url("../img/preorder/title_guild_m.png");
+
+        @include bp(pc) {
+            width: 909px;
+            height: 509px;
+            //background-image: url("../img/preorder/title_guild.png");
+        }
+    }
+
+   .more-wrap {
+       padding: 15px 0 0 0;
+       font-size: 14px;
+       line-height: 1.4;
+
+       @include bp(pc) {
+           padding-top: 27px;
+           font-size: 16px;
+       }
+
+       .bonus {
+           display: none;
+
+           @include bp(pc) {
+               display: inline-block;
+               width: 58px;
+               height: 15px;
+               margin-right: 5px;
+               background: url('../img/preorder/txt_bonus.png') no-repeat;
+               @include hide-text();
+               vertical-align: middle;
+           }
+       }
+
+       a {
+           color: #a86f2c;
+           letter-spacing: -.8px;
+           text-decoration: none;
+
+           &:after {
+               content: '';
+               display: inline-block;
+               width: 6px;
+               height: 11px;
+               margin-top: 4px;
+               margin-left: 5px;
+               //vertical-align: middle;
+               vertical-align: top;
+
+               //background: url('../img/preorder/guild_arrow2.png') no-repeat;
+               background-size: cover;
+           }
+
+           @include bp(pc) {
+               &:after {
+                   vertical-align: middle;
+                   margin-top: -2px;
+               }
+           }
+       }
+
+   }
+}
+
+// 혜택 slide 재선언

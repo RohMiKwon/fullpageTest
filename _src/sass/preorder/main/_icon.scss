@@ -1,0 +1,57 @@
+.icon {
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.icon.googleplay {
+  width: (34/2)+px;
+  height: (37/2)+px;
+  background-position: 0 0;
+
+  @include bp(pc) {
+    width: 28px;
+    height: 33px;
+    background-position: 0 0;
+  }
+}
+
+.icon.googleplay.small {
+  width: (30/2)+px;
+  height: (36/2)+px;
+  background-position: 0 (-98/2)+px;
+
+  @include bp(pc) {
+    width: 22px;
+    height: 26px;
+    background-position: 0 -84px;
+  }
+}
+
+.icon.appstore {
+  width: (34/2)+px;
+  height: (39/2)+px;
+  background-position: 0 (-48/2)+px;
+  margin-top: -2px;
+
+  @include bp(pc) {
+    width: 25px;
+    height: 31px;
+    background-position: 0 -43px;
+  }
+
+}
+
+.page-preorder {
+  .icon {
+    background-image: url("../img/preorder/sp_preorder_icon_m.png");
+    background-size: 25px 75px;
+
+    @include bp(pc) {
+      background-image: url("../img/preorder/sp_preorder_icon.png");
+      background-size: 28px 110px;
+    }
+  }
+}

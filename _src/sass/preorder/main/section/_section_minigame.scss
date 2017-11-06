@@ -1,0 +1,75 @@
+.section-minigame .section-contents {
+    padding-left: 0;
+    padding-right: 0;
+
+    .section-title {
+        width: (458/1.8)+px;
+        height: (246/1.8)+px;
+        //background-image: url("../img/preorder/title_minigame_m.png");
+
+        @include bp(pc) {
+            width: 727px;
+            height: 213px;
+            //background-image: url("../img/preorder/title_minigame.png");
+        }
+    }
+
+    .link-list {
+        max-width: 530px;
+        list-style: none;
+        margin: 3px auto 26px;
+        padding: 0;
+        text-align: left;
+        font-size: 14px;
+
+        .only-pc { display: none; }
+
+        @include bp(pc) {
+            font-size: 16px;
+            margin: 9px auto 60px;
+
+            .only-pc { display: inline; }
+        }
+
+        li {
+            position: relative;
+            width: 100%;
+            padding: 8px 20px;
+            text-align: center;
+            color: #7489bc;
+        }
+
+        .text {
+            display: inline-block;
+            margin: 0;
+            letter-spacing: -.8px;
+            text-align: left;
+
+            @include bp(pc) {
+                letter-spacing: -.7px;
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            width: 64px;
+            height: 24px;
+            margin-left: 7px;
+            line-height: 24px;
+            font-size: 12px;
+            color: #7489bc;
+            text-decoration: none;
+            white-space: nowrap;
+            background: #111c37;
+            border-radius: 500em;
+
+            @include bp(pc) {
+                width: 78px;
+                height: 28px;
+                padding-top: 1px;
+                font-size: 14px;
+                letter-spacing: -.6px;
+            }
+        }
+    }
+}

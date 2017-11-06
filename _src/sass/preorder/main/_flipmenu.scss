@@ -1,0 +1,140 @@
+.flip-menu {
+  display: none;
+  overflow: hidden;
+  margin: 30px auto 0;
+
+  @include bp(pc) {
+    display: block;
+  }
+
+  .flip-container {
+    @include transition(all, .3s);
+    display: inline-block;
+    perspective: 1000px;
+    transform-style: preserve-3d; //for ie
+    width: 207px;
+    height: 207px;
+    margin: 0 -20px;
+
+    &:hover {
+      .icon-wrap {
+        top: 12px;
+        transform: scale(1);
+      }
+
+      .front {
+        z-index: 1;
+        transform: rotateY(180deg);
+      }
+
+      .back {
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+    }
+
+    &.is-active {
+      .icon-wrap {
+        top: 12px;
+        transform: scale(1);
+      }
+
+      .front {
+        z-index: 1;
+        transform: rotateY(180deg);
+      }
+
+      .back {
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+    }
+
+    .flipper {
+      display: block;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    .front, .back {
+      //@include hide-text();
+
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 207px;
+      height: 207px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      backface-visibility: hidden;
+      transition: 0.6s;
+
+      border: 1px solid;
+    }
+
+    .front {
+      z-index: 2;
+      background-position: 50% 50%;
+      background-size: 65% auto;
+    }
+
+    .back {
+      z-index: 1;
+      transform: rotateY(-180deg);
+    }
+
+    &.media {
+      .front {
+        //background-image: url("../img/preorder/menu/media_pc.png");
+      }
+
+      .back {
+        //background-image: url("../img/preorder/menu/media_active_pc.png");
+      }
+    }
+
+    &.introduce {
+      .front {
+        //background-image: url("../img/preorder/menu/introduce_pc.png");
+      }
+
+      .back {
+        //background-image: url("../img/preorder/menu/introduce_active_pc.png");
+      }
+    }
+
+    &.character {
+      .front {
+        //background-image: url("../img/preorder/menu/character_pc.png");
+      }
+
+      .back {
+        //background-image: url("../img/preorder/menu/character_active_pc.png");
+      }
+    }
+
+    &.guild {
+      .front {
+        //background-image: url("../img/preorder/menu/guild_pc.png");
+      }
+
+      .back {
+        //background-image: url("../img/preorder/menu/guild_active_pc.png");
+      }
+    }
+
+    &.minigame {
+      .front {
+        //background-image: url("../img/preorder/menu/minigame_pc.png");
+      }
+
+      .back {
+        //background-image: url("../img/preorder/menu/minigame_active_pc.png");
+      }
+    }
+
+
+  }
+}

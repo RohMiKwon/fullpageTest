@@ -1,0 +1,14 @@
+
+// Breakpoint
+$bp-tablet: 640px;
+$bp-pc: 960px;
+$bp-max: 1260px;
+$hidpi: 'min-resolution: 1.5dppx';
+
+$breakpoints: (
+    popup: 'min-width: 500px',
+    tablet: 'min-width: 640px',
+    pc: 'min-width: 960px',
+    max: 'min-width:1260px'
+);
+
